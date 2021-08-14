@@ -1,5 +1,4 @@
-import { Field } from '@nestjs/graphql';
-import { Entity, ObjectIdColumn, PrimaryColumn } from 'typeorm';
+import { Column, Entity, ObjectIdColumn, PrimaryColumn } from 'typeorm';
 
 @Entity()
 export class Student {
@@ -9,9 +8,9 @@ export class Student {
   @PrimaryColumn()
   id: string;
 
-  @Field()
+  @Column()
   firstName: string;
 
-  @Field()
+  @Column()
   lastName: string;
 }
